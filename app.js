@@ -10,7 +10,7 @@ var app = express();
 app.use(bodyParser.json());
 app.use(cors())
 
-const port = 3001;
+const Port = 3001;
 const postRoute = require('./routes/posts');
 
 app.use('/posts', postRoute)
@@ -30,8 +30,8 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 //mongoose.connect('');
 
-app.listen(port, () => {
-  console.log(`connect:${port}`)
-})
+app.listen(process.env.PORT || Port, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+});
 module.exports = app;
 
