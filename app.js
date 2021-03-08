@@ -12,8 +12,9 @@ app.use(cors())
 
 const Port = 3001;
 const postRoute = require('./routes/posts');
-
+const userRoute = require('./routes/users');
 app.use('/posts', postRoute)
+app.use('/users', postRoute)
 
 app.use(bodyParser.urlencoded({ extended: false}));
 app.use(cookieParser())
