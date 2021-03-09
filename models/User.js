@@ -27,8 +27,8 @@ const userSechema =  mongoose.Schema (
           required: true
         },
         date:{
-          type:date,
-          default:Date.now
+          type:Date,
+           default:Date.now
         }
       }
 )
