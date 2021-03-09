@@ -14,7 +14,8 @@ first_name:req.body.first_name,
 last_name:req.body.last_name,
 contact_number:req.body.contact_number,
 email_id:req.body.email,
-password:req.body.password
+password:req.body.password,
+gender:req.body.gender
 })
 
 user.save().then(data=> {
