@@ -27,5 +27,14 @@ router.post('/',(req,res)=>
   });
 
 
+  router.delete('/:id', (req, res) => {
+    Post.remove({_id:req.params.id }).then(data => {
+      res.send(data);
+    }).catch(err => {
+      res.send(err);
+    })
+  })
+
+
 module.exports = router;
 
